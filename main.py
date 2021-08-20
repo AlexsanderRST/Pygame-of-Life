@@ -1,6 +1,5 @@
 """Alexsander Rosante's creation"""
 
-import random
 import pygame
 from pygame.locals import *
 from settings import *

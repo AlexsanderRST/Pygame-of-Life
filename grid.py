@@ -1,4 +1,4 @@
-"""Alexsander Rosante"""
+"""Alexsander Rosante's creation"""
 
 import pygame
 from cell import Cell
