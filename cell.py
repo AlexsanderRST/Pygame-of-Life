@@ -5,9 +5,10 @@ from settings import bg_color
 
 
 class Cell(pygame.sprite.Sprite):
-    def __init__(self, size, pos, color='#1C1B22'):
+    def __init__(self, size, pos, color='white', color_grid='#1C1B22'):
         super().__init__()
         self.color = color
+        self.color_grid = color_grid
         self.pos = pos
         self.image = pygame.Surface(2 * [size])
         self.image.fill(self.color)
@@ -22,4 +23,4 @@ class Cell(pygame.sprite.Sprite):
             self.image.fill(self.color)
         else:
             self.image.fill(bg_color)
-            pygame.draw.rect(self.image, self.color, pygame.Rect(0, 0, *self.rect.size), 1)
+            pygame.draw.rect(self.image, self.color_grid, pygame.Rect(0, 0, *self.rect.size), 1)

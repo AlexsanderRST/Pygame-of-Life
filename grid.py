@@ -5,16 +5,16 @@ from cell import Cell
 
 
 class Grid:
-    def __init__(self, rows, cols, size, color='#1C1B22'):
+    def __init__(self, rows, cols, size):
         self.cells = []
         self.cells_group = pygame.sprite.Group()
-        self.set_grid(rows, cols, size, color)
+        self.set_grid(rows, cols, size)
 
-    def set_grid(self, rows, cols, size, color):
+    def set_grid(self, rows, cols, size):
         for row in range(rows):
             line = []
             for col in range(cols):
-                cell = Cell(size, (row, col), color)
+                cell = Cell(size, (row, col))
                 self.cells_group.add(cell)
                 line.append(cell)
             self.cells.append(line)
